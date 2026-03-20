@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task Manager</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Task Manager</h1>
+      </header>
+
+      <div id="statusMessage" class="status-message" aria-live="polite"></div>
+
+      <form id="taskForm" class="task-form">
+        <div class="field">
+          <label for="titleInput">Title</label>
+          <input id="titleInput" type="text" placeholder="e.g. Pay rent" required />
+        </div>
+
+        <div class="field">
+          <label for="descriptionInput">Description</label>
+          <textarea id="descriptionInput" rows="3" placeholder="Optional details..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button id="submitBtn" class="btn btn-primary" type="submit">Add Task</button>
+          <button id="cancelBtn" class="btn btn-secondary" type="button" style="display: none;">
+            Cancel
+          </button>
+        </div>
+      </form>
+
+      <hr class="divider" />
+
+      <ul id="tasksList" class="tasks"></ul>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
+
