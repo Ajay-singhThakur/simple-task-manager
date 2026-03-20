@@ -34,6 +34,9 @@ From the project root:
 4. Start:
    - `npm start`
 
+Optional (recommended for local):
+- create `backend/.env` using `backend/.env.example`
+
 Open in your browser:
 - `http://localhost:3000`
 
@@ -158,15 +161,16 @@ This is a single Node.js service (API + static frontend) so it deploys as one we
 
 ## Deploy backend on Vercel (Serverless)
 
-This repo includes `api/index.js` + `vercel.json` so Vercel can run the Express app as a serverless function.
+This repo includes `backend/api/index.js` + `backend/vercel.json` so Vercel can run the Express app as a serverless function.
 
 ### Steps
 
 1. Push to GitHub
 2. In Vercel: **Add New** → **Project** → import your repo
-3. In Vercel Project Settings → **Environment Variables**, add:
+3. In Vercel Project Settings → set **Root Directory** to `backend`
+4. In Vercel Project Settings → **Environment Variables**, add:
    - `MONGODB_URI` = your MongoDB Atlas connection string
-4. Deploy
+5. Deploy
 
 Your app will be available at:
 - `/` (UI)
